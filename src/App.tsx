@@ -33,15 +33,19 @@ function App() {
             <Grid container spacing={4} justifyContent="center" alignItems="stretch">
 
                 {/* Header */}
+                {/* @ts-ignore*/}
                 <Grid item >
                     <HeaderUI />
                 </Grid>
 
                 {/* Selector + Alerta */}
+                {/* @ts-ignore*/}
                 <Grid container item spacing={2} justifyContent="center" alignItems="center" size={{xs:12}}>
+                    {/* @ts-ignore*/}
                     <Grid item >
                         <AlertUI description="No se preveen lluvias" />
                     </Grid>
+                    {/* @ts-ignore*/}
                     <Grid item >
                         <SelectorUI onCityChange={setSelectedCity} />
                     </Grid>
@@ -51,6 +55,7 @@ function App() {
                 {loading && <p>Cargando datos...</p>}
                 {error && <p>Error: {error}</p>}
                 {data && (<>
+                {/* @ts-ignore*/}
                     <Grid item >
                         <div className="indicators">
                             <IndicatorUI title="Temperatura aparente" description={`${data.current.apparent_temperature} ${data.current_units.apparent_temperature}`} />
@@ -61,7 +66,8 @@ function App() {
                     </Grid>
 
                 {/* Gráfico + Tabla (en bloque) */}
-                {!isSmallScreen && next24Time && next24Temp && next24Wind && (
+                {!isSmallScreen && next24Time && next24Temp && next24Wind && (<>
+                {/* @ts-ignore*/}
                     <Grid item >
                         <div className="chart-table-wrapper">
                             <div>
@@ -74,9 +80,11 @@ function App() {
                             </div>
                         </div>
                     </Grid>
+                    </>
                 )}
 
                 {/* Información adicional */}
+                {/* @ts-ignore*/}
                     <Grid item >
                         <div className="info-box">
                             <Typography variant="h6" gutterBottom>Información adicional</Typography>
@@ -97,3 +105,4 @@ function App() {
 }
 
 export default App;
+
