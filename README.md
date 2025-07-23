@@ -1,54 +1,26 @@
-# React + TypeScript + Vite
+# 🌤️ Dashboard Meteorológico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un **Dashboard del Clima** desarrollado con **React**, **Vite** y **Material UI**, que permite consultar el clima actual y las próximas 24 horas para diferentes ciudades del mundo. Se conecta a la API de **Open-Meteo** y presenta la información de manera clara y visualmente atractiva.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características
 
-## Expanding the ESLint configuration
+- 🌎 Selector de ciudad con múltiples ubicaciones predefinidas.
+- 📊 Indicadores del clima actual (temperatura, humedad, velocidad del viento, etc.).
+- 📈 Gráfico de temperatura para las próximas 24 horas.
+- 📋 Tabla con datos detallados por hora.
+- 🧠 Recomendaciones basadas en el estado actual del clima.
+- 📱 Diseño responsivo para móviles y pantallas pequeñas:
+  - Oculta tabla y gráfico en pantallas pequeñas.
+  - Indicadores se apilan verticalmente para mejor visualización.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Tecnologías utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **React** con **Vite** para el entorno de desarrollo rápido.
+- **Material UI (MUI)** para la interfaz visual.
+- **TypeScript** para tipado estático.
+- **CSS personalizado** para estilos adicionales.
+- **Open-Meteo API** para datos meteorológicos gratuitos.
